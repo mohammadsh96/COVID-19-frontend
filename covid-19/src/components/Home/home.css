@@ -1,0 +1,197 @@
+.total-statistics{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    color:#fff;
+}
+.total-statistics h4{
+    background-color: rgb(233, 76, 128);
+    height:30px;
+    width: fit-content;
+padding: 5px;
+margin: 40px;
+font-size: 15px;
+border-radius: 5px;
+align-items: center;
+
+}
+.cards{
+    display: grid;
+  column-gap: 50px;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+    width:90%;
+    padding: 20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.cards-inner{
+    
+    background-color: rgb(241, 239, 237);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top:20px;
+    border-left: 10px solid rgb(226, 28, 177);
+    box-shadow: 3px 3px rgb(156, 155, 155)
+
+}
+.cards-inner h3{
+    color:rgb(250, 47, 165);
+    margin-top:0;
+}
+.cards-inner h5{
+    color:rgb(37, 37, 37);
+    margin-bottom: 0;
+
+}
+.search-form input{
+    background-color: rgb(255, 255, 255);
+    margin-left:10px;  
+    width:150px;
+    box-shadow: 0.5px 0.5px rgb(201, 200, 200);
+    border: 2px inset rgb(199, 197, 197);
+height: 30px;
+font-size: large;
+}
+form button{
+   background-color: rgb(96, 59, 201);
+   font-weight: 500;
+    color:#fff;
+    margin-left:10px;
+height: 33px;
+width:90px
+
+
+}
+form select{
+    background-color: rgb(255, 255, 255);
+    margin-left:10px;  
+    width:150px;
+    box-shadow: 0.5px 0.5px rgb(201, 200, 200);
+border: 2px inset rgb(199, 197, 197);
+height: 33px;
+}
+.cards2{
+    display: grid;
+  column-gap: 40px;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+    width:90%;
+    padding: 20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.cards-inner2{
+    
+    background-color: rgb(241, 239, 237);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top:20px;
+    border-left: 10px solid rgb(226, 28, 177);
+    box-shadow: 3px 3px rgb(156, 155, 155);
+
+}
+.cards-inner2 h3{
+    margin-top:0px;
+    font-size: 25px;
+    color:rgb(250, 47, 165);
+}
+.cards-inner2 h5{
+    font-size: 15px;
+    color:rgb(82, 82, 82);
+}
+.cards-inner2 button{
+background-color: rgb(107, 43, 226);
+color:#fff;
+font-size: 20px;
+font-weight: bold;
+padding: 10px;
+margin-top:20px;
+
+}
+.cards-inner2 span{
+    color:gray;
+}
+
+
+  
+  .loader {
+      width: 20em;
+      height: 20em;
+      font-size: 10px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top:20px;
+  }
+  
+  .loader .face {
+      position: absolute;
+      border-radius: 50%;
+      border-style: solid;
+      animation: animate 1s linear infinite;
+  }
+  
+  .loader .face:nth-child(1) {
+      width: 100%;
+      height: 100%;
+      color: rgb(107, 43, 226);
+      border-color: currentColor transparent transparent currentColor;
+      border-width: 0.2em 0.2em 0em 0em;
+      --deg: -45deg;
+      animation-direction: normal;
+  }
+  
+  .loader .face:nth-child(2) {
+      width: 70%;
+      height: 70%;
+      color: rgb(250, 47, 165);
+      border-color: currentColor currentColor transparent transparent;
+      border-width: 0.2em 0em 0em 0.2em;
+      --deg: -135deg;
+      animation-direction: reverse;
+  }
+  
+  .loader .face .circle {
+      position: absolute;
+      width: 50%;
+      height: 0.1em;
+      top: 50%;
+      left: 50%;
+      background-color: transparent;
+      transform: rotate(var(--deg));
+      transform-origin: left;
+  }
+  
+  .loader .face .circle::before {
+      position: absolute;
+      top: -0.5em;
+      right: -0.5em;
+      content: '';
+      width: 1.5em;
+      height: 1.5em;
+      background-color: currentColor;
+      border-radius: 50%;
+      box-shadow: 0 0 2em,
+                  0 0 4em,
+                  0 0 6em,
+                  0 0 8em,
+                  0 0 10em,
+                  0 0 0 0.5em rgba(255, 255, 0, 0.1);
+  }
+  
+  @keyframes animate {
+      to {
+          transform: rotate(1turn);
+      }
+  }
+  
+  
+  
+ 
+  
