@@ -5,7 +5,7 @@ import AllCountries from "../AllCountries/AllCountries";
 import SignIn from "../auth/signin";
 import SignUp from "../auth/signup";
 import MyRecords from "../myRecords/myRecords";
-
+import PageNotFound from '../404/404';
 export default function Pages() {
   return (
     <>
@@ -16,6 +16,7 @@ export default function Pages() {
           <Route exact path="/signin" component={SignIn} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/myRecords" component={MyRecords} />
+          <Route path="*" component={PageNotFound} />
         </Switch>
       </Router>
     </>
