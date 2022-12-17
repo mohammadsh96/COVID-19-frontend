@@ -32,17 +32,24 @@ export default function LoginProvider(props) {
   const SignUpFunction = async (username, password) => {
     try {
       const userData = { username: `${username}`, password: `${password}` };
-       await axios
+   let data= await axios
         .post(`${API}/signup`, userData)
-        .then(setSignUp(true))
-        .then(
+        
+        if(data){
+          setSignUp(true)
+          console.log(data);
           Swal.fire({
             icon: "success",
             title: "Sign up",
             text: "You have signed Up successfully!",
           })
-        );
+        }
     } catch (err) {
+      Swal.fire({
+        icon: "error",
+        title: "Sign up",
+        text: "username already in use",
+      })
       console.log(err);
     }
   };
@@ -54,9 +61,16 @@ export default function LoginProvider(props) {
           "authorization",
           `Basic ${base64.encode(`${username}:${password}`)}`
         );
+if(response){
 
-      validateMyUser(response.body.user);
+  validateMyUser(response.body.user);
+}
     } catch (err) {
+      Swal.fire({
+        icon: "error",
+        title: "Login Failed",
+        text: "try again",
+      })
       return "error";
     }
   };

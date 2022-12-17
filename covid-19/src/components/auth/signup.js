@@ -24,7 +24,7 @@ const SignUp = () => {
         </div>
         <div>
           <label>Password </label>
-          <input type="password" name="password" required />
+          <input type="password" name="password"  required />
         </div>
 
         <button className="buttonSignup">Sign Up</button>

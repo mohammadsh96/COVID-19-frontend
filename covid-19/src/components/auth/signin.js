@@ -19,7 +19,7 @@ const SignIn = () => {
     };
     auth.loginFunction(body.username, body.password);
 
-    auth.loginStatus(true);
+ 
   };
   return (
     <section className="main-class">
