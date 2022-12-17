@@ -1,1 +1,1 @@
-export const API ='http://localhost:3003'
+export const API ='https://combative-erin-fish.cyclic.app'
