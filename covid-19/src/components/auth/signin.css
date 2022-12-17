@@ -1,0 +1,23 @@
+.loginForm{
+    margin-left: auto;
+     width:600px;
+     margin-right: auto;
+     position: relative;
+}
+
+.main-class {
+ 
+  font-size:50px;
+  opacity: hidden;
+}
+.signinlink{
+    color : rgb(0, 0, 0);
+    font-size : 20px ;
+    margin-bottom: 20px;
+    font-weight: 600;
+    }
+    
+    .signinlink:hover{
+     color:rgb(39, 88, 223);
+    
+    }
