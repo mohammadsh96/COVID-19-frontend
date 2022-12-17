@@ -3,7 +3,9 @@ import superagent from "superagent";
 import base64 from "base-64";
 import cookie from "react-cookies";
 import axios from "axios";
-const api = "http://localhost:3003";
+import Swal from "sweetalert2";
+import {API} from '../utilize/utilize';
+
 export const LoginContext = React.createContext();
 export default function LoginProvider(props) {
   const [signUp, setSignUp] = useState(false);
@@ -16,7 +18,6 @@ export default function LoginProvider(props) {
 
   useEffect(() => {
     const tokenFromCookies = cookie.load("token");
-    const userId = cookie.load("id");
 
     if (tokenFromCookies) {
       setLoginStatus(true);
@@ -25,14 +26,22 @@ export default function LoginProvider(props) {
       setLoginStatus(false);
       setUser({});
     }
+    // eslint-disable-next-line
   }, []);
 
   const SignUpFunction = async (username, password) => {
     try {
       const userData = { username: `${username}`, password: `${password}` };
-      let data = await axios
-        .post(`${api}/signup`, userData)
-        .then(setSignUp(true));
+       await axios
+        .post(`${API}/signup`, userData)
+        .then(setSignUp(true))
+        .then(
+          Swal.fire({
+            icon: "success",
+            title: "Sign up",
+            text: "You have signed Up successfully!",
+          })
+        );
     } catch (err) {
       console.log(err);
     }
@@ -40,7 +49,7 @@ export default function LoginProvider(props) {
   const loginFunction = async (username, password) => {
     try {
       const response = await superagent
-        .post(`${api}/signin`)
+        .post(`${API}/signin`)
         .set(
           "authorization",
           `Basic ${base64.encode(`${username}:${password}`)}`
@@ -51,9 +60,7 @@ export default function LoginProvider(props) {
       return "error";
     }
   };
-  if(signUp){
-    alert('you have signed up successfully')
-  }
+
   const logoutFunction = () => {
     setLoginStatus(false);
     setUser({});
@@ -63,22 +70,17 @@ export default function LoginProvider(props) {
   };
   const validateMyUser = (user) => {
     if (user.token) {
-      // const userFromToken = jwt.decode(user.token);
-      console.log("user.token >>>> ", user.token);
       setLoginStatus(true);
       setUser(user);
       cookie.save("token", user.token);
       cookie.save("username", user.username);
       cookie.save("id", user.id);
-
-      // const actionsCookie = JSON.stringify(user.actions);
-      cookie.save("actions", user.capabilities);
+      window.location.reload();
     } else {
       setLoginStatus(false);
       setUser({});
     }
   };
-  //read
 
   const state = {
     loginStatus: loginStatus,

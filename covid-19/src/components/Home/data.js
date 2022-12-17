@@ -1,3 +1,22 @@
+
+ //this has been replaced with fixed data for better performance 
+
+
+//   const getCountries = async () => {
+//     try {
+//       let data = await axios.get("https://api.covid19api.com/summary").then((result)=>{return result.data});
+//          let countries=data.Countries.map((e)=>{
+//         return e.Country;
+//       })
+//       if(data){
+//         setCountries(countries); //store in a State
+//      
+//       }
+//     } catch (err) {
+//       console.log(err);
+//     }
+//   };
+
 export const  countries = [
     "Afghanistan",
     "Albania",

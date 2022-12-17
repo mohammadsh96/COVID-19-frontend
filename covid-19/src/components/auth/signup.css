@@ -32,13 +32,14 @@ padding : 5px;
 .loginForm button {
     width: 400px;
     margin-left: 100px;
+    cursor: pointer;
 
     margin-top: 50px;
     height: 40px;
     border-radius: 10px;
     font-size: x-large;
     font-weight: 700;
-    background-color: darkgreen;
+    background-color:rgb(107, 43, 226);
     color:white;
 }
 .loginForm  p {
