@@ -9,7 +9,6 @@ import {API} from '../../utilize/utilize';
 
 export default function MyRecords() {
   const auth = useContext(LoginContext);
-  console.log(auth.loginStatus);
   const [myRecords, setMyRecords] = useState([]);
 
   const fetchMyRecord = async () => {
@@ -28,7 +27,6 @@ export default function MyRecords() {
     fetchMyRecord();
   }, []);
   const DeleteRecord = async (e) => {
-    console.log(e.id);
     await axios
       .delete(`${API}/MyRecords/${cookie.load("id")}/${e.id}`, {
         headers: {

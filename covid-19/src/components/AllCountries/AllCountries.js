@@ -19,9 +19,7 @@ export default function AllCountries() {
       setData(data.Countries);
       setLoader(false);
     }, 6000);
-    if (data) {
-      console.log("data.Countries: ", data);
-    }
+  
   };
 
   useEffect(() => {
