@@ -56,12 +56,11 @@ justify-content: center;
 nav button:hover{
     background-color: #cf180b;
     color:rgb(3, 3, 3);
-    width:8%;
+    width:fit-content;
     height:80%;
-    margin-right: 40px;
-    font-size:100%;
+    margin-right: 10px;
+    font-size:80%;
     border-radius: 10px;
-transition:transform .35s ease-in-out;
 cursor: pointer;
 justify-content: center;
 }
