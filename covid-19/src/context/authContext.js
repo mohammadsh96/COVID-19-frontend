@@ -37,7 +37,6 @@ export default function LoginProvider(props) {
         
         if(data){
           setSignUp(true)
-          console.log(data);
           Swal.fire({
             icon: "success",
             title: "Sign up",
