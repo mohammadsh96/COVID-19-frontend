@@ -1,13 +1,13 @@
 .loginForm{
-    margin-left: auto;
-     width:600px;
-     margin-right: auto;
+    margin-left: 0px;
+     width:100px;
+     margin-right: 0;
      position: relative;
 }
 
 .main-class {
  
-  font-size:50px;
+  font-size:10px;
   opacity: hidden;
 }
 .signinlink{
@@ -20,4 +20,13 @@
     .signinlink:hover{
      color:rgb(39, 88, 223);
     
+    }
+    @media screen and (max-width: 760px) {
+      .signinlink{
+        color : rgb(0, 0, 0);
+        font-size : 10px ;
+        margin-bottom: 20px;
+        font-weight: 600;
+        }
+        
     }
