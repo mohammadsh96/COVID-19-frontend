@@ -48,3 +48,57 @@ padding : 5px;
     margin-top: 50px;
 
 }
+@media screen and (max-width: 760px) {
+
+    .loginForm{
+        display:flex;
+        flex-direction: column;
+        margin-left: auto;
+        width:200px;
+        margin-right: auto;
+        justify-content: center;
+
+    }
+    
+    .loginForm label{
+        font-size: medium;
+        font-weight: 400;
+        justify-content: center;
+        margin: auto;
+        margin-top: 20px;
+    
+    }
+    .loginForm input {
+    width: 100px;
+    height:20px;
+    /* background-color:inherit; */
+    border:3px solid black;
+    border-radius: 10px;
+    font-size: 10px !important;
+    background-color:transparent;
+    
+    margin: auto;
+        
+    }
+    .loginForm div{
+        display:flex;
+        flex-direction: column;
+    }
+    .loginForm button {
+        width: 100px;
+        margin: auto;
+        margin-top: 20px;
+        height: 30px;
+        border-radius: 10px;
+        font-size: medium;
+        font-weight: 500;
+        background-color:rgb(107, 43, 226);
+        color:white;
+    }
+    .loginForm  p {
+        justify-content: center;
+    
+        margin-top: 20px;
+    
+    }
+}

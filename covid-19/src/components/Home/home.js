@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <>
       <div>
-        <h3>World Total statistics</h3>
+        <h3  id="titles">World Total statistics</h3>
         <div className="total-statistics">
           <h4>Total Confirmed :{statistics.TotalConfirmed} </h4>
           <h4>Total Deaths :{statistics.TotalDeaths}</h4>
@@ -54,7 +54,7 @@ export default function Home() {
       </div>
       <br></br>
       <br></br>
-      <h3>Get statistics for a Specific Country</h3>
+      <h3 id="titles">Get statistics for a Specific Country</h3>
 
       <div className="search-form">
         <form onSubmit={SearchFun}>
