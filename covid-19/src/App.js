@@ -9,8 +9,8 @@ function App() {
     <>
       <Back></Back>
       <div className="App">
-        <LoginProvider>
         <Nav />
+        <LoginProvider>
           <Pages />
         </LoginProvider>
       </div>

@@ -1,14 +1,12 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import cookie from "react-cookies";
 import axios from "axios";
 import Swal from "sweetalert2";
 import oops from "../../assets/oops.png";
 import { Redirect, Switch } from "react-router-dom";
-import { LoginContext } from "../../context/authContext";
 import {API} from '../../utilize/utilize';
 
 export default function MyRecords() {
-  const auth = useContext(LoginContext);
   const [myRecords, setMyRecords] = useState([]);
 
   const fetchMyRecord = async () => {
@@ -51,10 +49,10 @@ export default function MyRecords() {
       {cookie.load("token") ? (
         <>
           {myRecords.length ? (
-            <div className="cards2" key={1}>
+            <div className="cards2" >
               {myRecords.map((e, idx) => {
                 return (
-                  <>
+                  
                     <div className="cards-inner2" key={idx}>
                       <h3>Country:{e.Country}</h3>
                       <h5>Total Confirmed Cases :{e.Total_Deaths_Cases}</h5>
@@ -69,7 +67,7 @@ export default function MyRecords() {
                         Delete Record
                       </button>
                     </div>
-                  </>
+                  
                 );
               })}
             </div>
