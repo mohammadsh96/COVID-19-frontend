@@ -3,7 +3,6 @@ import axios from "axios";
 import "../Home/home.css";
 import Swal from 'sweetalert2';
 import {API} from '../../utilize/utilize';
-
 import oops from "../../assets/oops.png";
 import cookie from 'react-cookies'
 export default function AllCountries() {

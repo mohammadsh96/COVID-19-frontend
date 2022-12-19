@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./nav.css";
 import cookie from "react-cookies";
 export default function Nav() {
@@ -13,7 +13,7 @@ export default function Nav() {
     setLoginState(false);
     window.location.reload();
   };
-  useEffect(() => {}, [loginStatus]);
+  
   return (
     <div className="nav">
       <nav>
